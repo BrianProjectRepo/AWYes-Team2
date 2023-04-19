@@ -11,7 +11,7 @@ phases:
 artifacts:
   files:
       - /index.html
-   name: artifact-name
+  name: artifact-name
       - source: /
          destination: /var/www/html
       # base-directory:/var/www/html/
