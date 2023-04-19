@@ -8,10 +8,4 @@ phases:
     commands:
       - echo "Updating S3 index file..."
       - aws s3 cp index.html s3://awyes-s3-bucket-testing/
-artifacts:
-  files:
-      - /index.html
-  name: artifact-name
-      - source: /
-         destination: /var/www/html
-      # base-directory:/var/www/html/
+
