@@ -1,11 +1,16 @@
 version: 0.2
 phases:
-  install:
-    commands:
-      - echo "Installing AWS CLI..."
-      - pip install awscli
-  build:
-    commands:
-      - echo "Updating S3 index file..."
-      - aws s3 cp index.html s3://awyes-s3-bucket-testing/
-
+ install:
+   commands:
+     - echo "install step"         	     
+ pre_build:
+   commands:
+     - echo "pre_build step"
+ build:
+   commands:
+     - echo "build step"     
+     - pwd                    
+     - aws s3 cp index.html s3://awyes-s3-bucket/
+ post_build:
+   commands:
+     - echo "post_build step"
